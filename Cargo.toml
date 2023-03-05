@@ -1,0 +1,22 @@
+cargo-features = ["different-binary-name"]
+
+[package]
+name = "{{project-name}}"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.64.0"
+autobins = false
+autoexamples = false
+autotests = false
+autobenches = false
+
+[[bin]]
+name = "{{project-name}}"
+filename = "{{project-name}}.fap"
+bench = false
+test = false
+
+[dependencies]
+flipperzero = { version = "0.7.2" }
+flipperzero-sys = { version = "0.7.2" }
+flipperzero-rt = { version = "0.7.2" }
