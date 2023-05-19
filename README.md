@@ -9,17 +9,33 @@ Currently supports SDK 14.0 ([flipperzero-firmware@0.77.1](https://github.com/fl
 ## Initial setup
 
 1. Install [`rustup`](https://rust-lang.github.io/rustup/) by following the instructions on [`rustup.rs`](https://rustup.rs/).
-2. Use `rustup` to install the `thumbv7em-none-eabihf` target:
+1. Install the nightly build tool-chain to support the[`different-binary-name`](https://doc.rust-lang.org/cargo/reference/unstable.html#different-binary-name) feature:
     ```
-    rustup target add thumbv7em-none-eabihf
+    rustup toolchain install nightly
+    ```
+1. Install [`cargo-generate`](https://github.com/cargo-generate/cargo-generate):
+    ```
+    cargo install cargo-generate
+    ```
+1. Use `rustup` to install the `thumbv7em-none-eabihf` target to the nightly build:
+    ```
+    rustup target add --toolchain nightly thumbv7em-none-eabihf
     ```
 
-## Use `cargo generate` to clone this template.
-
-```
-cargo generate --git https://github.com/flipperzero-rs/flipperzero-template.git --name my-project
-cd my-project
-```
+## Generate the project
+1. Use `cargo generate` to clone this template:
+    ```
+    cargo generate --git https://github.com/flipperzero-rs/flipperzero-template.git --name my-project
+    ```
+    If the `cargo generate`command fails with a segfault, try cloning the template project locally and use a relative path instead:
+    ```
+    git clone https://github.com/flipperzero-rs/flipperzero-template.git
+    cargo generate --git flipperzero-template --name my-project
+    ```
+1. Switch into the local directory:
+    ```
+    cd my-project
+    ```
 
 ## Build with `cargo build`
 
