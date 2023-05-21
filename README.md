@@ -27,11 +27,6 @@ Currently supports SDK 14.0 ([flipperzero-firmware@0.77.1](https://github.com/fl
     ```
     cargo generate --git https://github.com/flipperzero-rs/flipperzero-template.git --name my-project
     ```
-    If the `cargo generate` command fails with a segfault, try cloning the template project locally and use a relative path instead:
-    ```
-    git clone https://github.com/flipperzero-rs/flipperzero-template.git
-    cargo generate --git flipperzero-template --name my-project
-    ```
 1. Switch into the local directory:
     ```
     cd my-project
