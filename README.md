@@ -2,7 +2,7 @@
 
 A template for kick-starting a Rust + FlipperZero project using [`flipperzero-rs`](https://github.com/flipperzero-rs/flipperzero) 🐬❤️🦀.
 
-Currently supports SDK 28.2 ([flipperzero-firmware@0.84.1](https://github.com/flipperdevices/flipperzero-firmware/tree/0.84.1)).
+Currently supports SDK 35.0 ([flipperzero-firmware@0.89.0](https://github.com/flipperdevices/flipperzero-firmware/tree/0.89.0)).
 
 # Usage
 
