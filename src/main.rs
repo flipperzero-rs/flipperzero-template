@@ -15,7 +15,7 @@ manifest!(
     name = "Flipper Zero Rust",
     app_version = 1,
     has_icon = true,
-    // See https://github.com/flipperzero-rs/flipperzero/blob/v0.7.2/docs/icons.md for icon format
+    // See https://github.com/flipperzero-rs/flipperzero/blob/v0.11.0/docs/icons.md for icon format
     icon = "rustacean-10x10.icon",
 );
 
@@ -23,7 +23,7 @@ manifest!(
 entry!(main);
 
 // Entry point
-fn main(_args: *mut u8) -> i32 {
+fn main(_args: Option<&CStr>) -> i32 {
     println!("Hello, Rust!");
 
     0
