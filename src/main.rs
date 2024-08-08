@@ -23,7 +23,7 @@ manifest!(
 entry!(main);
 
 // Entry point
-fn main(_args: Option<&CStr>) -> i32 {
+fn main(_args: *mut u8) -> i32 {
     println!("Hello, Rust!");
 
     0
