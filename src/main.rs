@@ -7,6 +7,8 @@
 // Required for panic handler
 extern crate flipperzero_rt;
 
+use core::ffi::CStr;
+
 use flipperzero::println;
 use flipperzero_rt::{entry, manifest};
 
@@ -23,7 +25,7 @@ manifest!(
 entry!(main);
 
 // Entry point
-fn main(_args: *mut u8) -> i32 {
+fn main(_args: Option<&CStr>) -> i32 {
     println!("Hello, Rust!");
 
     0

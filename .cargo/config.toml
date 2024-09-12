@@ -14,9 +14,6 @@ rustflags = [
 
     # Linker flags for relocatable binary
     "-C", "link-args=--script=flipperzero-rt.ld --Bstatic --relocatable --discard-all --strip-all --lto-O3 --lto-whole-program-visibility",
-
-    # Required to link with `lld`
-    "-Z", "no-unique-section-names=yes",
 ]
 
 [build]
