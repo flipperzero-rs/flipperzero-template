@@ -2,8 +2,6 @@
 
 A template for kick-starting a Rust + FlipperZero project using [`flipperzero-rs`](https://github.com/flipperzero-rs/flipperzero) 🐬❤️🦀.
 
-Currently supports SDK 35.0 ([flipperzero-firmware@0.89.0](https://github.com/flipperdevices/flipperzero-firmware/tree/0.89.0)).
-
 # Usage
 
 ## Initial setup
@@ -41,6 +39,18 @@ cargo build
 ## Copy the binary to your Flipper Zero
 
 The resulting `.fap` binary can be found in [`target/thumbv7em-none-eabihf/debug`](target/thumbv7em-none-eabihf/debug).
+
+```sh
+storage send target/thumbv7em-none-eabihf/release/my-project.fap /ext/apps/Examples/my-project.fap
+```
+
+## Build and run on change
+
+You can automatically build and run your binary using [`cargo-watch`](https://crates.io/crates/cargo-watch) and the `run-fap` tool.
+
+```sh
+cargo watch -s 'cargo build --release && run-fap target/thumbv7em-none-eabihf/release/my-project.fap'
+```
 
 # License
 
