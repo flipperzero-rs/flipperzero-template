@@ -38,6 +38,9 @@ cargo build
 
 ## Copy the binary to your Flipper Zero
 
+> [!IMPORTANT]
+> This requires the `storage` command from [`flipperzero-tools`](https://crates.io/crates/flipperzero-tools) (`cargo install --locked flipperzero-tools`) or [`storage.py`](https://github.com/flipperdevices/flipperzero-firmware/blob/dev/scripts/storage.py) from the official SDK.
+
 The resulting `.fap` binary can be found in [`target/thumbv7em-none-eabihf/debug`](target/thumbv7em-none-eabihf/debug).
 
 ```sh
@@ -45,6 +48,9 @@ storage send target/thumbv7em-none-eabihf/release/my-project.fap /ext/apps/Examp
 ```
 
 ## Build and run on change
+
+> [!IMPORTANT]
+> This requires the `run-fap` command from [`flipperzero-tools`](https://crates.io/crates/flipperzero-tools) (`cargo install --locked flipperzero-tools`) or [`runfap.py`](https://github.com/flipperdevices/flipperzero-firmware/blob/dev/scripts/runfap.py) from the official SDK.
 
 You can automatically build and run your binary using [`cargo-watch`](https://crates.io/crates/cargo-watch) and the `run-fap` tool.
 
