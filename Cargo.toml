@@ -3,8 +3,8 @@ cargo-features = ["different-binary-name"]
 [package]
 name = "{{project-name}}"
 version = "0.1.0"
-edition = "2021"
-rust-version = "1.81.0"
+edition = "2024"
+rust-version = "1.85.0"
 autobins = false
 autoexamples = false
 autotests = false
@@ -17,6 +17,6 @@ bench = false
 test = false
 
 [dependencies]
-flipperzero = { version = "0.15.0" }
-flipperzero-sys = { version = "0.15.0" }
-flipperzero-rt = { version = "0.15.0" }
+flipperzero = { version = "0.16.0" }
+flipperzero-sys = { version = "0.16.0" }
+flipperzero-rt = { version = "0.16.0" }
